@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 # Enable CORS
-CORS(app, resources={r"/send-query": {"origins": "https://evolvera.vercel.app"}})
+CORS(app, resources={r"/send-query": {"origins": "*"}})  # Allow all origins
 
 # SMTP Configuration
 SMTP_SERVER = 'smtp.gmail.com'  # Replace with your SMTP server
